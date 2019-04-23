@@ -1,4 +1,4 @@
 aux_source_directory(. src)
-
-# add_executable(${CMAKE_CURRENT_LIST_DIR} ${src})
-message(${CMAKE_CURRENT_LIST_DIR})
+get_filename_component(name ${CMAKE_CURRENT_LIST_DIR} NAME)
+add_executable(${name} ${src})
+target_link_libraries(${name} Threads::Threads)
