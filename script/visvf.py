@@ -7,6 +7,14 @@ if(len(sys.argv) < 2):
     print('Usage: ', sys.argv[0], 'input.vtk')
     sys.exit(1)
 
-LegacyVTKReader(sys.argv[1])
+
+reader = LegacyVTKReader(FileNames=sys.argv[1])
+Show(reader)
+
+glyph = Glyph(Input=reader)
+Show(glyph)
+
+SetViewProperties(ViewSize=[512, 512])
+
 Render()
 Interact()
