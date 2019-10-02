@@ -23,7 +23,7 @@ def meshshow(V: np.ndarray, F: np.ndarray):
     actor.SetMapper(mapper)
 
     camera = vtk.vtkCamera()
-    camera.SetPosition(1, 1, 1)
+    camera.SetPosition(1, 1, 1)  # todo: remove hard-code
     camera.SetFocalPoint(0, 0, 0)
 
     renderer = vtk.vtkRenderer()
@@ -37,4 +37,5 @@ def meshshow(V: np.ndarray, F: np.ndarray):
 
     interact = vtk.vtkRenderWindowInteractor()
     interact.SetRenderWindow(win)
+
     interact.Start()
