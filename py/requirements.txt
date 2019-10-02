@@ -1,6 +1,0 @@
-vtk
-numpy
-
-# sparse matrix
-scipy
-

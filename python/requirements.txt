@@ -1,0 +1,8 @@
+# matrix
+numpy
+
+# sparse matrix
+scipy
+
+# optional: standard file format for io and visualization
+vtk
